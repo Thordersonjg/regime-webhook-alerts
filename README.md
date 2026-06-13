@@ -40,11 +40,26 @@ curl -X POST https://getregime.com/api/v1/webhooks \
 
 All webhooks are signed with HMAC-SHA256. The server verifies signatures using timing-safe comparison to prevent replay attacks.
 
-## Regime API
+## Regime API tiers
 
-- **Free**: 30 req/min, regime detection, market overview
-- **Pro** ($99/mo): Webhooks, signals, intelligence briefs, real-time data
-- **Docs**: [getregime.com/quickstart](https://getregime.com/quickstart)
+Webhooks require **Pro** or above.
+
+| Tier | Rate limit | What you get | Price |
+|------|-----------|--------------|-------|
+| **Free** | 10 req/min | Regime + market overview + BTC/ETH snapshots (15-min delayed). No card. | $0 |
+| **Pro** | 120 req/min | Real-time, all 20+ assets, strategy signals, intelligence briefs, **regime-shift webhooks** | $49/mo |
+| **Institutional** | 1000 req/min | Everything in Pro + historical data + priority support | $149/mo |
+
+**Get a free API key** (no card): [getregime.com](https://getregime.com) · Docs: [getregime.com/quickstart](https://getregime.com/quickstart) · npm: `npm install getregime`
+
+## Regime open-source toolkit
+
+- [freqtrade-regime-filter](https://github.com/Thordersonjg/freqtrade-regime-filter) — drop-in Freqtrade entry gate (free key auto-provisioned)
+- [regime-trading-bot](https://github.com/Thordersonjg/regime-trading-bot) — Python position-sizing bot
+- [regime-dashboard](https://github.com/Thordersonjg/regime-dashboard) — single-file live HTML dashboard
+- [regime-webhook-alerts](https://github.com/Thordersonjg/regime-webhook-alerts) — forward regime-change alerts to Slack/Discord
+
+⭐ Star whichever helps — it points more traders here.
 
 ## License
 
